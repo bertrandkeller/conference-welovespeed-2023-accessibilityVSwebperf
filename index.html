@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta property="twitter:image" content="/twittercard.png"/>
+    <meta property="twitter:title" content="Accessibilité - Suivre les obligations légales sans efforts"/>
+    <meta name="twitter:site" content="@bertrandkeller"/>
+    <meta name="twitter:creator" content="@bertrandkeller"/>
+
+		<title>Accessibilité - Suivre les obligations légales sans efforts</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+    .slides :not(.pdf-page) section {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center !important;
+      justify-content: center !important;
+      height: 100% !important;
+      top: 0 !important;
+    }
+    .print-pdf .container {
+      height: auto !important;
+    }
+    .print-pdf .containers {
+      width: auto !important;
+    }
+    .container {
+      top: 0 !important;
+      height: 100vh !important;
+    }
+    .containers {
+      position: relative;
+      display: flex;
+      width: 100vw;
+      height: 100vh !important;
+    }
+    section:has(.fixed) {
+      display: flex !important;
+      position: initial !important;
+    }
+    .flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+    .reveal p {
+      max-width: 80%;
+      margin: var(--r-block-margin) auto;
+    }
+    .print-pdf .container.present {
+      left: 0 !important;
+      width: 100% !important;
+    }
+    .flex > * {
+      padding: 1.5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fixed {
+      position:fixed;
+      top: 0px;
+      width: 100%;
+    }
+    svg {
+      display: inline-block;
+      max-width: 90%;
+      max-height: 100%
+      height: auto;
+      fill: currentColor;
+      vertical-align: baseline
+    }
+    .deck2 {
+      display: none;
+    }
+    .col {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        background: #4631d4;
+    }
+    .col1 {
+      background: #4631d4;
+    }
+    .col2 {
+      color: #000;
+      background: #fff;
+    }
+    .absolute {
+      position: relative !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      transform: none !important;
+    }
+    .elm {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    .elm :has(.current-fragment) {
+      transform: scale(2);
+    }
+    .vs {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      display: grid;
+      align-items: center;
+      font-size: 1.5em;
+      font-family: Monaco;
+    }
+    .vs p {
+      position: relative;
+      margin-inline: auto;
+      display: inline;
+      width: max-content;
+      padding: 5px 10px;
+      z-index: 0;
+    }
+    .vs p:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      content:'';
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #fff 0%, #fff 49.8%, rgba(0,0,0,1) 49.8%);
+      z-index: -1;
+    }
+    .text-white {
+      color: #fff;
+    }
+
+    .text-black {
+      color: #000;
+    }
+    .ml1 {
+      margin-left: 0.1em;
+    }
+    .mr1 {
+      margin-right: 0.08em;
+    }
+    p.m0 {
+      margin: 0;
+    }
+    p.mb1 {
+      margin-bottom: 0.1;
+    }
+    .strong {
+      font-weight: 600;
+    }
+    </style>
+	</head>
+	<body>
+		<div class="reveal deck1">
+			<div class="slides absolute">
+        <section class="container">
+          <div class="containers">
+            <div class="col">
+              <span class="elm">
+                <h2 class="fragment m0 m1" data-fragment-index="1">Lièvre</h2>
+                <p class="fragment fade-in m0" data-fragment-index="3">Web Performance</p>
+              </span>
+            </div>
+            <div class="col col2">
+              <span class="elm">
+                <h2 class="fragment m0 m1" data-fragment-index="2">Tortue</h2>
+                <p class="fragment fade-in m0" data-fragment-index="4">Accessibility</p>
+              </span>
+            </div>
+          </div>
+          <div class="vs">
+            <p class="fragment strong" data-fragment-index="5">
+              <span class="text-black mr1">V</span><span class="text-white ml1">S</span>
+            </p>
+          </div>
+        </section>
+      </div>
+      <!-- Et la fin la tortue, elle gagne ! pendant que le lièvre, il pleure, la tortue, elle est un peu au dessus du game -->
+      <!-- Vous avez l’image, non ?-->
+      <div class="slides">
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            <!-- .slide: data-background="#4631d4" -->
+            ## La différence ? <!-- .class: class="r-fit-text" -->
+          </textarea>
+          <!-- 2 métiers de gens qui testent -->
+        </section>
+        <div class="slides absolute">
+        <section class="container">
+          <div class="containers">
+            <div class="col">
+              <span class="elm">
+                <h4 class="m0">WebPerf</h4>
+                <p class="fragment m0 m1" data-fragment-index="1">Tests automatisés</p>
+                <p class="fragment fade-in m0" data-fragment-index="3">Front & Back</p>
+                <p class="fragment fade-in m0" data-fragment-index="5">Tâtonnage</p>
+                <p class="fragment fade-in m0" data-fragment-index="7">Expérimentation</p>
+              </span>
+            </div>
+            <div class="col col2">
+              <span class="elm">
+                <h4 class="m0">Accessibility</h4>
+                <p class="fragment m0 m1" data-fragment-index="2">Tests manuels</p>
+                <p class="fragment fade-in m0" data-fragment-index="4">Front</p>
+                <p class="fragment fade-in m0" data-fragment-index="6">Normatif</p>
+                <p class="fragment fade-in m0" data-fragment-index="8">Légale</p>
+              </span>
+            </div>
+          </div>
+        </section>
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            <!-- .slide: data-background="#4631d4" -->
+            ## 🤔 <!-- .class: class="r-fit-text" -->
+          </textarea>
+        </section>
+        <section class="container">
+          <div class="containers">
+            <div class="col">
+              <span class="elm">
+                <h4 class="m0">WebPerf</h4>
+                <p class="fragment m0 m1" data-fragment-index="1">Données objectives mais résultats relatifs</p>
+              </span>
+            </div>
+            <div class="col col2">
+              <span class="elm">
+                <h4 class="m0">Accessibility</h4>
+                <p class="fragment m0 m1" data-fragment-index="2">Données subjectives mais résultats absolus</p>
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            <!-- .slide: data-background="#4631d4" -->
+            ## Le RGAA ?
+            ---
+            ### Amélioration de l’accessibilité
+            1. Thématiques et Critères
+            1. Processus d’amélioration
+            1. Mesure commune (conformité)
+            1. Obligation légale
+            <!-- Loi sur la discrimination -->
+            <!-- On se demande si la webperf a une quelconque intérêt, On construit et on optimise après. -->
+          </textarea>
+        </section>
+        <section data-transition="none" data-background-image="/assets/app-weight.png" data-background="#333" data-background-size="auto 85%">
+        </section>
+        <section data-transition="fade">
+            <h2>Obésité logiciel</h2>
+            <ul>
+              <li>Nombre d’éléments dans une page</li>
+              <li>FrameWork JavaScript</li>
+              <li>Effet rebond</li>
+              <li>Anxiété - <a href="https://calibreapp.com/blog/calm-web">The Calm Web</a></li>
+              <li>…</li>
+            </ul>
+        </section>
+        <section data-transition="none" data-background-image="/assets/car-city.png" data-background="#333" data-background-size="auto 85%">
+        </section>
+        <section data-auto-animate data-transition="fade">
+          <h2>Audits A11Y</h2>
+					<div class="flex">
+            <div data-id="box" class="fragment" style="background: #4631d4; width: 150px; height: 100px; margin: 10px;">38%</div>
+            <div data-id="box" class="fragment" style="background: #4631d4; width: 150px; height: 100px; margin: 10px;">Maturité<br>faible</div>
+            <div data-id="box" class="fragment" style="background: #4631d4; width: 150px; height: 100px; margin: 10px;">Forte<br>exclusion</div>
+					</div>
+				</section>
+        <section data-transition="none" data-background-image="/assets/fabriquer-corriger.jpg" data-background="#fff" data-background-size="auto 85%">
+        </section>
+        <section data-markdown data-transition="none">
+          <textarea data-template>
+            <!-- On aurait beau optimiser à fond la WebPerf qu’on aurait quand même ce problème de maturité-->
+            ## Les points communs ?
+            1. Homogénéité du code ?
+            1. RGESN ?
+            1. Version textuelle ?
+            1. Architecture logicielle ?
+            ---
+            ## Des pistes ?
+            ---
+            ## Critère RGESN - 4.4
+            > Le service numérique optimise-t-il le parcours de navigation pour chaque fonctionnalité principale ?
+            ---
+            ## Critère RGESN - 4.8
+            > Le service numérique utilise-t-il du texte ou de l’image au lieu de contenu vidéo, audio ou animé lorsque cela est possible ?
+            ---
+            ## Comment la Tortue gagne ?
+            <!--
+            1. Le lièvre a cru que ses outils automatisés permettait de tout voir
+            1. La tortue a analysé les blocages humains
+            => Et oui, la performance se joue sur la rapidité moyenne de chaque utilisateur pour finir un parcours (unité de valeur). Sur ce sujet la tortue est bien plus avancée
+            Objectif : Faire une seule fois les modifications : performances, accessibilité, sécurité...
+            -->
+          </textarea>
+        </section>
+        <section data-markdown>
+          <script type="text/template">
+          <!-- .slide: data-transition="none" -->
+            Embaucher moi pour raconter des histoires !
+          </script>
+        </section>
+      </div>
+			</div>
+		</div>
+
+    <div class="reveal deck2">
+      <div class="slides">
+        <section data-transition="none" data-background-image="/assets/slide-1.png" data-background-gradient="linear-gradient(to right, #000 0%, #000 40.1%, #b4C7E7 40.1%)" data-background-size="85%"></section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            <!-- .slide: data-background="#4631d4" -->
+            # Accessibilité
+            Suivre les obligations légales sans efforts
+            ---
+            <!-- .slide: data-background="#222" -->
+            ## Compliance
+            > L’ensemble des processus destinés à assurer qu’une entreprise, ses dirigeants et ses salariés respectent les normes juridiques et éthiques qui leur sont applicables
+            ---
+            <!-- .slide: data-background="#4631d4" -->
+            @bertrandkeller
+          </textarea>
+        </section>
+        <section data-transition="none" data-background-image="/assets/netsecure-day-viabilite.png" data-background="#fff" data-background-size="65% auto">
+          <!-- <h4 class="fixed">Comment je vois les choses</h4> -->
+        </section>
+        <section data-transition="none" data-background="#fff">
+          <svg role="img" aria-label="1" viewBox="0 0 238.404 205.263">
+            <g fill="#4631d4" stroke="#333" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M110.921 36.017a46.869 46.869 0 00-18.713 18.658 46.869 46.869 0 0135.071 24.077 46.869 46.869 0 01-.067 44.909 46.869 46.869 0 0028.495-5.297 46.869 46.869 0 0018.78-63.567 46.869 46.869 0 00-63.566-18.78z" />
+              <path
+                d="M61.317 141.038a46.869 46.869 0 0025.47 7.043 46.869 46.869 0 013.591-42.39 46.869 46.869 0 0139.07-22.143 46.869 46.869 0 00-18.691-22.151 46.869 46.869 0 00-64.54 15.101 46.869 46.869 0 0015.1 64.54z" />
+              <path
+                d="M177.104 131.566a46.869 46.869 0 00-6.701-25.562 46.869 46.869 0 01-38.459 18.185 46.869 46.869 0 01-38.77-22.665 46.869 46.869 0 00-9.768 27.288 46.869 46.869 0 0045.473 48.226 46.869 46.869 0 0048.225-45.472z" />
+            </g>
+            <use class="fragment current-visible fade-out" xlink:href="/assets/devconsimple.svg#0" />
+            <use class="fragment current-visible fade-in-then-out" xlink:href="/assets/devconsimple.svg#1" />
+            <use class="fragment fade-in-then-out" xlink:href="/assets/devconsimple.svg#2" />
+            <use class="fragment fade-in-then-out" xlink:href="/assets/devconsimple.svg#3" />
+            <use class="fragment fade-in-then-out" xlink:href="/assets/devconsimple.svg#4" />
+          </svg>
+        </section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            <!-- .slide: data-background="#222" -->
+            ## LOW-TECH
+            ---
+            <!-- .slide: data-background="firebrick" -->
+            ## Conformité
+            Qu’est-ce qui cloche ?
+            ---
+            ## RGAA
+          </textarea>
+        </section>
+        <section data-transition="none" data-background="#fff">
+          <svg role="img" aria-label="1" viewBox="0 0 238.404 205.263">
+            <g fill="#4631d4" stroke="#333" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M110.921 36.017a46.869 46.869 0 00-18.713 18.658 46.869 46.869 0 0135.071 24.077 46.869 46.869 0 01-.067 44.909 46.869 46.869 0 0028.495-5.297 46.869 46.869 0 0018.78-63.567 46.869 46.869 0 00-63.566-18.78z" />
+              <path
+                d="M61.317 141.038a46.869 46.869 0 0025.47 7.043 46.869 46.869 0 013.591-42.39 46.869 46.869 0 0139.07-22.143 46.869 46.869 0 00-18.691-22.151 46.869 46.869 0 00-64.54 15.101 46.869 46.869 0 0015.1 64.54z" />
+              <path
+                d="M177.104 131.566a46.869 46.869 0 00-6.701-25.562 46.869 46.869 0 01-38.459 18.185 46.869 46.869 0 01-38.77-22.665 46.869 46.869 0 00-9.768 27.288 46.869 46.869 0 0045.473 48.226 46.869 46.869 0 0048.225-45.472z" />
+            </g>
+            <use class="fragment current-visible fade-in-then-out" xlink:href="/assets/devconsimple.svg#5" />
+            <use class="fragment fade-in-then-out" xlink:href="/assets/devconsimple.svg#6" />
+          </svg>
+        </section>
+        <section data-auto-animate data-transition="fade">
+          <h2>Audits Manuel</h2>
+					<div class="flex">
+            <div data-id="box" class="fragment" style="background: #4631d4; width: 150px; height: 100px; margin: 10px;">Archivage</div>
+            <div data-id="box" class="fragment" style="background: #4631d4; width: 150px; height: 100px; margin: 10px;">Collecte</div>
+            <div data-id="box" class="fragment" style="background: #4631d4; width: 150px; height: 100px; margin: 10px;">Publication</div>
+					</div>
+				</section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            <!-- .slide: data-background="#222" -->
+            ## Frago
+          </textarea>
+        </section>
+        <section data-transition="fade" data-background-image="/assets/ssg.png" data-background="#fff" data-background-size="86%"></section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            ## Suivi Multiservices
+          </textarea>
+        </section>
+        <section data-transition="fade" data-background-image="/assets/Frago-organisme-seul.png" data-background="#fff" data-background-size="66%"></section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            <!-- .slide: data-background="#4631d4" -->
+            ## Référent
+          </textarea>
+        </section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            ## Consolidation
+          </textarea>
+        </section>
+        <section data-transition="fade" data-background-image="/assets/Frago-organisme-direction.png" data-background="#fff" data-background-size="86%"></section>
+        <section data-markdown data-transition="fade">
+          <textarea data-template>
+            <!-- .slide: data-background="#222" -->
+            ## Du code ?
+          </textarea>
+        </section>
+        <section data-transition="fade" data-background-image="/assets/slide-2.png" data-background="#fff" data-background-size="86%"></section>
+        <section data-transition="fade" data-background-image="/assets/slide-3.png" data-background="#fff" data-background-size="90%"></section>
+      </div>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+      let deck1 = new Reveal( document.querySelector( '.deck1' ), {
+        controls: false,
+				hash: true,
+        progress: false,
+        backgroundTransition: 'none',
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      } );
+      deck1.on( 'slidechanged', () => {
+        console.log( 'Deck 1 slide changed' );
+      } );
+      deck1.initialize();
+
+      let deck2 = new Reveal( document.querySelector( '.deck2' ), {
+        controls: false,
+				hash: true,
+        progress: false,
+        backgroundTransition: 'none',
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      } );
+      deck2.initialize().then( () => {
+        deck2.slide(1);
+      } );
+      deck2.on( 'slidechanged', () => {
+        console.log( 'Deck 2 slide changed' );
+      } );
+		</script>
+	</body>
+</html>
